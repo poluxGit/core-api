@@ -1,5 +1,43 @@
 {
-    "require": {
-        "poluxGit/core-db": "0.*"
+  "name": "poluxgit/corephp-api",
+  "description": "CorePHP@PoLuX API",
+  "keywords": ["CorePHP-API", "PoLuX"],
+  "license": "MIT",
+  "repositories": [{
+    "type": "package",
+    "package": {
+      "name": "poluxgit/corephp",
+      "version": "1.0-dev",
+      "source": {
+        "url": "https://github.com/poluxGit/core-php.git",
+        "type": "git",
+        "reference": "dev"
+      }
     }
+  },
+  {
+    "type": "package",
+    "package": {
+      "name": "poluxgit/corephp",
+      "version": "1.0-master",
+      "source": {
+        "url": "https://github.com/poluxGit/core-php.git",
+        "type": "git",
+        "reference": "master"
+      }
+    }
+  }],
+  "require": {
+    "php":">=5.3",
+    "poluxgit/corephp":"1.0-dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.5.0"
+  },
+  "autoload": {
+       "psr-4": {
+          "CoreAPI\\":"src/"
+       },
+       "include-path": ["libs/"]
+  }
 }
